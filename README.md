@@ -4,14 +4,20 @@ This project, `networkmanager-openconnect-sso`, enhances NetworkManager with the
 
 ## Installation
 
-To get started with `networkmanager-openconnect-sso`, clone the repository to your local machine:
+To get started with `networkmanager-openconnect-sso`, you need to clone the repository to your local machine. Since this project includes the `openconnect-sso` submodule, you should use the following command to clone the repository along with its submodule:
 
 ```shell
-git clone https://github.com/mschabhuettl/networkmanager-openconnect-sso.git
+git clone --recurse-submodules https://github.com/mschabhuettl/networkmanager-openconnect-sso.git
 cd networkmanager-openconnect-sso
 ```
 
-Follow the standard procedure for building and installing a NetworkManager extension on your system. Ensure you have the necessary dependencies like NetworkManager, OpenConnect, and the appropriate development libraries.
+If you've already cloned the project and missed the submodule, you can fetch the submodule using:
+
+```shell
+git submodule update --init
+```
+
+Next, follow the standard procedure for building and installing a NetworkManager extension on your system. Ensure you have the necessary dependencies like NetworkManager, OpenConnect, and the appropriate development libraries.
 
 ## Usage
 
